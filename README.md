@@ -34,3 +34,42 @@ To run this project, you will need to have Python installed on your machine. Add
 
 ```bash
 pip install numpy pandas matplotlib catboost scikit-learn feature-engine shap
+
+
+## Usage    
+
+To use the project, follow these steps:
+
+Clone the repository:
+
+git clone https://github.com/yourusername/top_spotify_podcast_episodes.git
+cd top_spotify_podcast_episodes
+
+
+Ensure you have the dataset (top-spotify-podcasts-daily-updated.zip) in the project directory.
+
+Run the script:
+
+python downloading_dataset.py
+
+
+This script will perform the following operations:
+
+Extract the dataset from the ZIP file.
+Process the data, including handling duplicates and missing values.
+Encode categorical features using Rare Label Encoding.
+Split the data into training and testing sets.
+Train a CatBoost regression model to predict podcast ratings.
+Generate SHAP values to explain model predictions.
+Model Explanation
+The CatBoostRegressor model is used in this project, which is a gradient boosting algorithm known for its efficiency with categorical features. The model is trained on the processed dataset to predict the ratings of podcasts.
+
+Evaluation
+The model's performance is evaluated using the Root Mean Squared Error (RMSE) metric, which provides insight into how well the model is performing on both the training and testing datasets.
+
+## Results
+The results of the model training can be visualized using SHAP summary plots, which illustrate the impact of each feature on the model's predictions.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
